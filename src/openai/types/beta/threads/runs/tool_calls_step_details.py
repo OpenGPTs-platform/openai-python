@@ -8,10 +8,13 @@ from ....._models import BaseModel
 from .code_tool_call import CodeToolCall
 from .function_tool_call import FunctionToolCall
 from .retrieval_tool_call import RetrievalToolCall
+from .web_retrieval_tool_call import WebRetrievalToolCall
 
 __all__ = ["ToolCallsStepDetails", "ToolCall"]
 
-ToolCall = Annotated[Union[CodeToolCall, RetrievalToolCall, FunctionToolCall], PropertyInfo(discriminator="type")]
+ToolCall = Annotated[
+    Union[CodeToolCall, RetrievalToolCall, WebRetrievalToolCall, FunctionToolCall], PropertyInfo(discriminator="type")
+]
 
 
 class ToolCallsStepDetails(BaseModel):
@@ -19,7 +22,7 @@ class ToolCallsStepDetails(BaseModel):
     """An array of tool calls the run step was involved in.
 
     These can be associated with one of three types of tools: `code_interpreter`,
-    `retrieval`, or `function`.
+    `web_retrieval`, `retrieval`, or `function`.
     """
 
     type: Literal["tool_calls"]

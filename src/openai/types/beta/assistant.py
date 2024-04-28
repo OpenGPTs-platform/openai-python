@@ -32,7 +32,9 @@ class ToolFunction(BaseModel):
     """The type of tool being defined: `function`"""
 
 
-Tool = Annotated[Union[ToolCodeInterpreter, ToolRetrieval, ToolWebRetrieval, ToolFunction], PropertyInfo(discriminator="type")]
+Tool = Annotated[
+    Union[ToolCodeInterpreter, ToolRetrieval, ToolWebRetrieval, ToolFunction], PropertyInfo(discriminator="type")
+]
 
 
 class Assistant(BaseModel):
