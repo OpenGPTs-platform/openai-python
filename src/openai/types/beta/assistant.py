@@ -7,7 +7,7 @@ from ..shared import FunctionDefinition
 from ..._utils import PropertyInfo
 from ..._models import BaseModel
 
-__all__ = ["Assistant", "Tool", "ToolCodeInterpreter", "ToolRetrieval", "ToolFunction"]
+__all__ = ["Assistant", "Tool", "ToolCodeInterpreter", "ToolRetrieval", "ToolWebRetrieval", "ToolFunction"]
 
 
 class ToolCodeInterpreter(BaseModel):
@@ -21,7 +21,7 @@ class ToolRetrieval(BaseModel):
 
 
 class ToolWebRetrieval(BaseModel):
-    type: Literal["retrieval"]
+    type: Literal["web_retrieval"]
     """The type of tool being defined: `retrieval`"""
 
 
