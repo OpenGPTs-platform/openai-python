@@ -20,6 +20,11 @@ class ToolRetrieval(BaseModel):
     """The type of tool being defined: `retrieval`"""
 
 
+class ToolWebRetrieval(BaseModel):
+    type: Literal["retrieval"]
+    """The type of tool being defined: `retrieval`"""
+
+
 class ToolFunction(BaseModel):
     function: FunctionDefinition
 
@@ -27,7 +32,7 @@ class ToolFunction(BaseModel):
     """The type of tool being defined: `function`"""
 
 
-Tool = Annotated[Union[ToolCodeInterpreter, ToolRetrieval, ToolFunction], PropertyInfo(discriminator="type")]
+Tool = Annotated[Union[ToolCodeInterpreter, ToolRetrieval, ToolWebRetrieval, ToolFunction], PropertyInfo(discriminator="type")]
 
 
 class Assistant(BaseModel):
