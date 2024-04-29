@@ -16,6 +16,7 @@ __all__ = [
     "Tool",
     "ToolAssistantToolsCode",
     "ToolAssistantToolsRetrieval",
+    "ToolAssistantToolsWebRetrieval",
     "ToolAssistantToolsFunction",
     "Usage",
 ]
@@ -52,6 +53,11 @@ class ToolAssistantToolsRetrieval(BaseModel):
     """The type of tool being defined: `retrieval`"""
 
 
+class ToolAssistantToolsWebRetrieval(BaseModel):
+    type: Literal["web_retrieval"]
+    """The type of tool being defined: `retrieval`"""
+
+
 class ToolAssistantToolsFunction(BaseModel):
     function: FunctionDefinition
 
@@ -59,7 +65,9 @@ class ToolAssistantToolsFunction(BaseModel):
     """The type of tool being defined: `function`"""
 
 
-Tool = Union[ToolAssistantToolsCode, ToolAssistantToolsRetrieval, ToolAssistantToolsFunction]
+Tool = Union[
+    ToolAssistantToolsCode, ToolAssistantToolsRetrieval, ToolAssistantToolsWebRetrieval, ToolAssistantToolsFunction
+]
 
 
 class Usage(BaseModel):
