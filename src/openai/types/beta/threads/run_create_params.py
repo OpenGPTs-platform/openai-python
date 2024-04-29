@@ -12,6 +12,7 @@ __all__ = [
     "Tool",
     "ToolAssistantToolsCode",
     "ToolAssistantToolsRetrieval",
+    "ToolAssistantToolsWebRetrieval",
     "ToolAssistantToolsFunction",
 ]
 
@@ -71,6 +72,11 @@ class ToolAssistantToolsRetrieval(TypedDict, total=False):
     """The type of tool being defined: `retrieval`"""
 
 
+class ToolAssistantToolsWebRetrieval(TypedDict, total=False):
+    type: Literal["web_retrieval"]
+    """The type of tool being defined: `retrieval`"""
+
+
 class ToolAssistantToolsFunction(TypedDict, total=False):
     function: Required[shared_params.FunctionDefinition]
 
@@ -78,4 +84,6 @@ class ToolAssistantToolsFunction(TypedDict, total=False):
     """The type of tool being defined: `function`"""
 
 
-Tool = Union[ToolAssistantToolsCode, ToolAssistantToolsRetrieval, ToolAssistantToolsFunction]
+Tool = Union[
+    ToolAssistantToolsCode, ToolAssistantToolsRetrieval, ToolAssistantToolsWebRetrieval, ToolAssistantToolsFunction
+]
