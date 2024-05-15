@@ -1,4 +1,4 @@
-# File generated from our OpenAPI spec by Stainless.
+# File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 from __future__ import annotations
 
@@ -14,6 +14,8 @@ from openai.types.beta.threads import (
     Run,
 )
 
+# pyright: reportDeprecated=false
+
 base_url = os.environ.get("TEST_API_BASE_URL", "http://127.0.0.1:4010")
 
 
@@ -21,7 +23,7 @@ class TestRuns:
     parametrize = pytest.mark.parametrize("client", [False, True], indirect=True, ids=["loose", "strict"])
 
     @parametrize
-    def test_method_create(self, client: OpenAI) -> None:
+    def test_method_create_overload_1(self, client: OpenAI) -> None:
         run = client.beta.threads.runs.create(
             "string",
             assistant_id="string",
@@ -29,20 +31,126 @@ class TestRuns:
         assert_matches_type(Run, run, path=["response"])
 
     @parametrize
-    def test_method_create_with_all_params(self, client: OpenAI) -> None:
+    def test_method_create_with_all_params_overload_1(self, client: OpenAI) -> None:
         run = client.beta.threads.runs.create(
             "string",
             assistant_id="string",
             additional_instructions="string",
+            additional_messages=[
+                {
+                    "role": "user",
+                    "content": "x",
+                    "attachments": [
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                    ],
+                    "metadata": {},
+                },
+                {
+                    "role": "user",
+                    "content": "x",
+                    "attachments": [
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                    ],
+                    "metadata": {},
+                },
+                {
+                    "role": "user",
+                    "content": "x",
+                    "attachments": [
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                    ],
+                    "metadata": {},
+                },
+            ],
             instructions="string",
+            max_completion_tokens=256,
+            max_prompt_tokens=256,
             metadata={},
-            model="string",
+            model="gpt-4-turbo",
+            response_format="none",
+            stream=False,
+            temperature=1,
+            tool_choice="none",
             tools=[{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
+            top_p=1,
+            truncation_strategy={
+                "type": "auto",
+                "last_messages": 1,
+            },
         )
         assert_matches_type(Run, run, path=["response"])
 
     @parametrize
-    def test_raw_response_create(self, client: OpenAI) -> None:
+    def test_raw_response_create_overload_1(self, client: OpenAI) -> None:
         response = client.beta.threads.runs.with_raw_response.create(
             "string",
             assistant_id="string",
@@ -54,7 +162,7 @@ class TestRuns:
         assert_matches_type(Run, run, path=["response"])
 
     @parametrize
-    def test_streaming_response_create(self, client: OpenAI) -> None:
+    def test_streaming_response_create_overload_1(self, client: OpenAI) -> None:
         with client.beta.threads.runs.with_streaming_response.create(
             "string",
             assistant_id="string",
@@ -68,11 +176,175 @@ class TestRuns:
         assert cast(Any, response.is_closed) is True
 
     @parametrize
-    def test_path_params_create(self, client: OpenAI) -> None:
+    def test_path_params_create_overload_1(self, client: OpenAI) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `thread_id` but received ''"):
             client.beta.threads.runs.with_raw_response.create(
                 "",
                 assistant_id="string",
+            )
+
+    @parametrize
+    def test_method_create_overload_2(self, client: OpenAI) -> None:
+        run_stream = client.beta.threads.runs.create(
+            "string",
+            assistant_id="string",
+            stream=True,
+        )
+        run_stream.response.close()
+
+    @parametrize
+    def test_method_create_with_all_params_overload_2(self, client: OpenAI) -> None:
+        run_stream = client.beta.threads.runs.create(
+            "string",
+            assistant_id="string",
+            stream=True,
+            additional_instructions="string",
+            additional_messages=[
+                {
+                    "role": "user",
+                    "content": "x",
+                    "attachments": [
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                    ],
+                    "metadata": {},
+                },
+                {
+                    "role": "user",
+                    "content": "x",
+                    "attachments": [
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                    ],
+                    "metadata": {},
+                },
+                {
+                    "role": "user",
+                    "content": "x",
+                    "attachments": [
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                    ],
+                    "metadata": {},
+                },
+            ],
+            instructions="string",
+            max_completion_tokens=256,
+            max_prompt_tokens=256,
+            metadata={},
+            model="gpt-4-turbo",
+            response_format="none",
+            temperature=1,
+            tool_choice="none",
+            tools=[{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
+            top_p=1,
+            truncation_strategy={
+                "type": "auto",
+                "last_messages": 1,
+            },
+        )
+        run_stream.response.close()
+
+    @parametrize
+    def test_raw_response_create_overload_2(self, client: OpenAI) -> None:
+        response = client.beta.threads.runs.with_raw_response.create(
+            "string",
+            assistant_id="string",
+            stream=True,
+        )
+
+        assert response.http_request.headers.get("X-Stainless-Lang") == "python"
+        stream = response.parse()
+        stream.close()
+
+    @parametrize
+    def test_streaming_response_create_overload_2(self, client: OpenAI) -> None:
+        with client.beta.threads.runs.with_streaming_response.create(
+            "string",
+            assistant_id="string",
+            stream=True,
+        ) as response:
+            assert not response.is_closed
+            assert response.http_request.headers.get("X-Stainless-Lang") == "python"
+
+            stream = response.parse()
+            stream.close()
+
+        assert cast(Any, response.is_closed) is True
+
+    @parametrize
+    def test_path_params_create_overload_2(self, client: OpenAI) -> None:
+        with pytest.raises(ValueError, match=r"Expected a non-empty value for `thread_id` but received ''"):
+            client.beta.threads.runs.with_raw_response.create(
+                "",
+                assistant_id="string",
+                stream=True,
             )
 
     @parametrize
@@ -278,7 +550,7 @@ class TestRuns:
             )
 
     @parametrize
-    def test_method_submit_tool_outputs(self, client: OpenAI) -> None:
+    def test_method_submit_tool_outputs_overload_1(self, client: OpenAI) -> None:
         run = client.beta.threads.runs.submit_tool_outputs(
             "string",
             thread_id="string",
@@ -287,7 +559,30 @@ class TestRuns:
         assert_matches_type(Run, run, path=["response"])
 
     @parametrize
-    def test_raw_response_submit_tool_outputs(self, client: OpenAI) -> None:
+    def test_method_submit_tool_outputs_with_all_params_overload_1(self, client: OpenAI) -> None:
+        run = client.beta.threads.runs.submit_tool_outputs(
+            "string",
+            thread_id="string",
+            tool_outputs=[
+                {
+                    "tool_call_id": "string",
+                    "output": "string",
+                },
+                {
+                    "tool_call_id": "string",
+                    "output": "string",
+                },
+                {
+                    "tool_call_id": "string",
+                    "output": "string",
+                },
+            ],
+            stream=False,
+        )
+        assert_matches_type(Run, run, path=["response"])
+
+    @parametrize
+    def test_raw_response_submit_tool_outputs_overload_1(self, client: OpenAI) -> None:
         response = client.beta.threads.runs.with_raw_response.submit_tool_outputs(
             "string",
             thread_id="string",
@@ -300,7 +595,7 @@ class TestRuns:
         assert_matches_type(Run, run, path=["response"])
 
     @parametrize
-    def test_streaming_response_submit_tool_outputs(self, client: OpenAI) -> None:
+    def test_streaming_response_submit_tool_outputs_overload_1(self, client: OpenAI) -> None:
         with client.beta.threads.runs.with_streaming_response.submit_tool_outputs(
             "string",
             thread_id="string",
@@ -315,7 +610,7 @@ class TestRuns:
         assert cast(Any, response.is_closed) is True
 
     @parametrize
-    def test_path_params_submit_tool_outputs(self, client: OpenAI) -> None:
+    def test_path_params_submit_tool_outputs_overload_1(self, client: OpenAI) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `thread_id` but received ''"):
             client.beta.threads.runs.with_raw_response.submit_tool_outputs(
                 "string",
@@ -330,12 +625,69 @@ class TestRuns:
                 tool_outputs=[{}, {}, {}],
             )
 
+    @parametrize
+    def test_method_submit_tool_outputs_overload_2(self, client: OpenAI) -> None:
+        run_stream = client.beta.threads.runs.submit_tool_outputs(
+            "string",
+            thread_id="string",
+            stream=True,
+            tool_outputs=[{}, {}, {}],
+        )
+        run_stream.response.close()
+
+    @parametrize
+    def test_raw_response_submit_tool_outputs_overload_2(self, client: OpenAI) -> None:
+        response = client.beta.threads.runs.with_raw_response.submit_tool_outputs(
+            "string",
+            thread_id="string",
+            stream=True,
+            tool_outputs=[{}, {}, {}],
+        )
+
+        assert response.http_request.headers.get("X-Stainless-Lang") == "python"
+        stream = response.parse()
+        stream.close()
+
+    @parametrize
+    def test_streaming_response_submit_tool_outputs_overload_2(self, client: OpenAI) -> None:
+        with client.beta.threads.runs.with_streaming_response.submit_tool_outputs(
+            "string",
+            thread_id="string",
+            stream=True,
+            tool_outputs=[{}, {}, {}],
+        ) as response:
+            assert not response.is_closed
+            assert response.http_request.headers.get("X-Stainless-Lang") == "python"
+
+            stream = response.parse()
+            stream.close()
+
+        assert cast(Any, response.is_closed) is True
+
+    @parametrize
+    def test_path_params_submit_tool_outputs_overload_2(self, client: OpenAI) -> None:
+        with pytest.raises(ValueError, match=r"Expected a non-empty value for `thread_id` but received ''"):
+            client.beta.threads.runs.with_raw_response.submit_tool_outputs(
+                "string",
+                thread_id="",
+                stream=True,
+                tool_outputs=[{}, {}, {}],
+            )
+
+        with pytest.raises(ValueError, match=r"Expected a non-empty value for `run_id` but received ''"):
+            client.beta.threads.runs.with_raw_response.submit_tool_outputs(
+                "",
+                thread_id="string",
+                stream=True,
+                tool_outputs=[{}, {}, {}],
+            )
+
 
 class TestAsyncRuns:
     parametrize = pytest.mark.parametrize("async_client", [False, True], indirect=True, ids=["loose", "strict"])
 
     @parametrize
-    async def test_method_create(self, async_client: AsyncOpenAI) -> None:
+    async def test_method_create_overload_1(self, async_client: AsyncOpenAI) -> None:
         run = await async_client.beta.threads.runs.create(
             "string",
             assistant_id="string",
@@ -343,20 +695,126 @@ class TestAsyncRuns:
         assert_matches_type(Run, run, path=["response"])
 
     @parametrize
-    async def test_method_create_with_all_params(self, async_client: AsyncOpenAI) -> None:
+    async def test_method_create_with_all_params_overload_1(self, async_client: AsyncOpenAI) -> None:
         run = await async_client.beta.threads.runs.create(
             "string",
             assistant_id="string",
             additional_instructions="string",
+            additional_messages=[
+                {
+                    "role": "user",
+                    "content": "x",
+                    "attachments": [
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                    ],
+                    "metadata": {},
+                },
+                {
+                    "role": "user",
+                    "content": "x",
+                    "attachments": [
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                    ],
+                    "metadata": {},
+                },
+                {
+                    "role": "user",
+                    "content": "x",
+                    "attachments": [
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                    ],
+                    "metadata": {},
+                },
+            ],
             instructions="string",
+            max_completion_tokens=256,
+            max_prompt_tokens=256,
             metadata={},
-            model="string",
+            model="gpt-4-turbo",
+            response_format="none",
+            stream=False,
+            temperature=1,
+            tool_choice="none",
             tools=[{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
+            top_p=1,
+            truncation_strategy={
+                "type": "auto",
+                "last_messages": 1,
+            },
         )
         assert_matches_type(Run, run, path=["response"])
 
     @parametrize
-    async def test_raw_response_create(self, async_client: AsyncOpenAI) -> None:
+    async def test_raw_response_create_overload_1(self, async_client: AsyncOpenAI) -> None:
         response = await async_client.beta.threads.runs.with_raw_response.create(
             "string",
             assistant_id="string",
@@ -368,7 +826,7 @@ class TestAsyncRuns:
         assert_matches_type(Run, run, path=["response"])
 
     @parametrize
-    async def test_streaming_response_create(self, async_client: AsyncOpenAI) -> None:
+    async def test_streaming_response_create_overload_1(self, async_client: AsyncOpenAI) -> None:
         async with async_client.beta.threads.runs.with_streaming_response.create(
             "string",
             assistant_id="string",
@@ -382,11 +840,175 @@ class TestAsyncRuns:
         assert cast(Any, response.is_closed) is True
 
     @parametrize
-    async def test_path_params_create(self, async_client: AsyncOpenAI) -> None:
+    async def test_path_params_create_overload_1(self, async_client: AsyncOpenAI) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `thread_id` but received ''"):
             await async_client.beta.threads.runs.with_raw_response.create(
                 "",
                 assistant_id="string",
+            )
+
+    @parametrize
+    async def test_method_create_overload_2(self, async_client: AsyncOpenAI) -> None:
+        run_stream = await async_client.beta.threads.runs.create(
+            "string",
+            assistant_id="string",
+            stream=True,
+        )
+        await run_stream.response.aclose()
+
+    @parametrize
+    async def test_method_create_with_all_params_overload_2(self, async_client: AsyncOpenAI) -> None:
+        run_stream = await async_client.beta.threads.runs.create(
+            "string",
+            assistant_id="string",
+            stream=True,
+            additional_instructions="string",
+            additional_messages=[
+                {
+                    "role": "user",
+                    "content": "x",
+                    "attachments": [
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                    ],
+                    "metadata": {},
+                },
+                {
+                    "role": "user",
+                    "content": "x",
+                    "attachments": [
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                    ],
+                    "metadata": {},
+                },
+                {
+                    "role": "user",
+                    "content": "x",
+                    "attachments": [
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                        {
+                            "file_id": "string",
+                            "tools": [
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                                {"type": "code_interpreter"},
+                            ],
+                        },
+                    ],
+                    "metadata": {},
+                },
+            ],
+            instructions="string",
+            max_completion_tokens=256,
+            max_prompt_tokens=256,
+            metadata={},
+            model="gpt-4-turbo",
+            response_format="none",
+            temperature=1,
+            tool_choice="none",
+            tools=[{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
+            top_p=1,
+            truncation_strategy={
+                "type": "auto",
+                "last_messages": 1,
+            },
+        )
+        await run_stream.response.aclose()
+
+    @parametrize
+    async def test_raw_response_create_overload_2(self, async_client: AsyncOpenAI) -> None:
+        response = await async_client.beta.threads.runs.with_raw_response.create(
+            "string",
+            assistant_id="string",
+            stream=True,
+        )
+
+        assert response.http_request.headers.get("X-Stainless-Lang") == "python"
+        stream = response.parse()
+        await stream.close()
+
+    @parametrize
+    async def test_streaming_response_create_overload_2(self, async_client: AsyncOpenAI) -> None:
+        async with async_client.beta.threads.runs.with_streaming_response.create(
+            "string",
+            assistant_id="string",
+            stream=True,
+        ) as response:
+            assert not response.is_closed
+            assert response.http_request.headers.get("X-Stainless-Lang") == "python"
+
+            stream = await response.parse()
+            await stream.close()
+
+        assert cast(Any, response.is_closed) is True
+
+    @parametrize
+    async def test_path_params_create_overload_2(self, async_client: AsyncOpenAI) -> None:
+        with pytest.raises(ValueError, match=r"Expected a non-empty value for `thread_id` but received ''"):
+            await async_client.beta.threads.runs.with_raw_response.create(
+                "",
+                assistant_id="string",
+                stream=True,
             )
 
     @parametrize
@@ -592,7 +1214,7 @@ class TestAsyncRuns:
             )
 
     @parametrize
-    async def test_method_submit_tool_outputs(self, async_client: AsyncOpenAI) -> None:
+    async def test_method_submit_tool_outputs_overload_1(self, async_client: AsyncOpenAI) -> None:
         run = await async_client.beta.threads.runs.submit_tool_outputs(
             "string",
             thread_id="string",
@@ -601,7 +1223,30 @@ class TestAsyncRuns:
         assert_matches_type(Run, run, path=["response"])
 
     @parametrize
-    async def test_raw_response_submit_tool_outputs(self, async_client: AsyncOpenAI) -> None:
+    async def test_method_submit_tool_outputs_with_all_params_overload_1(self, async_client: AsyncOpenAI) -> None:
+        run = await async_client.beta.threads.runs.submit_tool_outputs(
+            "string",
+            thread_id="string",
+            tool_outputs=[
+                {
+                    "tool_call_id": "string",
+                    "output": "string",
+                },
+                {
+                    "tool_call_id": "string",
+                    "output": "string",
+                },
+                {
+                    "tool_call_id": "string",
+                    "output": "string",
+                },
+            ],
+            stream=False,
+        )
+        assert_matches_type(Run, run, path=["response"])
+
+    @parametrize
+    async def test_raw_response_submit_tool_outputs_overload_1(self, async_client: AsyncOpenAI) -> None:
         response = await async_client.beta.threads.runs.with_raw_response.submit_tool_outputs(
             "string",
             thread_id="string",
@@ -614,7 +1259,7 @@ class TestAsyncRuns:
         assert_matches_type(Run, run, path=["response"])
 
     @parametrize
-    async def test_streaming_response_submit_tool_outputs(self, async_client: AsyncOpenAI) -> None:
+    async def test_streaming_response_submit_tool_outputs_overload_1(self, async_client: AsyncOpenAI) -> None:
         async with async_client.beta.threads.runs.with_streaming_response.submit_tool_outputs(
             "string",
             thread_id="string",
@@ -629,7 +1274,7 @@ class TestAsyncRuns:
         assert cast(Any, response.is_closed) is True
 
     @parametrize
-    async def test_path_params_submit_tool_outputs(self, async_client: AsyncOpenAI) -> None:
+    async def test_path_params_submit_tool_outputs_overload_1(self, async_client: AsyncOpenAI) -> None:
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `thread_id` but received ''"):
             await async_client.beta.threads.runs.with_raw_response.submit_tool_outputs(
                 "string",
@@ -641,5 +1286,62 @@ class TestAsyncRuns:
             await async_client.beta.threads.runs.with_raw_response.submit_tool_outputs(
                 "",
                 thread_id="string",
+                tool_outputs=[{}, {}, {}],
+            )
+
+    @parametrize
+    async def test_method_submit_tool_outputs_overload_2(self, async_client: AsyncOpenAI) -> None:
+        run_stream = await async_client.beta.threads.runs.submit_tool_outputs(
+            "string",
+            thread_id="string",
+            stream=True,
+            tool_outputs=[{}, {}, {}],
+        )
+        await run_stream.response.aclose()
+
+    @parametrize
+    async def test_raw_response_submit_tool_outputs_overload_2(self, async_client: AsyncOpenAI) -> None:
+        response = await async_client.beta.threads.runs.with_raw_response.submit_tool_outputs(
+            "string",
+            thread_id="string",
+            stream=True,
+            tool_outputs=[{}, {}, {}],
+        )
+
+        assert response.http_request.headers.get("X-Stainless-Lang") == "python"
+        stream = response.parse()
+        await stream.close()
+
+    @parametrize
+    async def test_streaming_response_submit_tool_outputs_overload_2(self, async_client: AsyncOpenAI) -> None:
+        async with async_client.beta.threads.runs.with_streaming_response.submit_tool_outputs(
+            "string",
+            thread_id="string",
+            stream=True,
+            tool_outputs=[{}, {}, {}],
+        ) as response:
+            assert not response.is_closed
+            assert response.http_request.headers.get("X-Stainless-Lang") == "python"
+
+            stream = await response.parse()
+            await stream.close()
+
+        assert cast(Any, response.is_closed) is True
+
+    @parametrize
+    async def test_path_params_submit_tool_outputs_overload_2(self, async_client: AsyncOpenAI) -> None:
+        with pytest.raises(ValueError, match=r"Expected a non-empty value for `thread_id` but received ''"):
+            await async_client.beta.threads.runs.with_raw_response.submit_tool_outputs(
+                "string",
+                thread_id="",
+                stream=True,
+                tool_outputs=[{}, {}, {}],
+            )
+
+        with pytest.raises(ValueError, match=r"Expected a non-empty value for `run_id` but received ''"):
+            await async_client.beta.threads.runs.with_raw_response.submit_tool_outputs(
+                "",
+                thread_id="string",
+                stream=True,
                 tool_outputs=[{}, {}, {}],
             )

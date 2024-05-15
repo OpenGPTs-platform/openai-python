@@ -1,4 +1,4 @@
-# File generated from our OpenAPI spec by Stainless.
+# File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ from typing_extensions import Literal
 import httpx
 
 from .. import _legacy_response
-from ..types import Completion, completion_create_params
+from ..types import completion_create_params
 from .._types import NOT_GIVEN, Body, Query, Headers, NotGiven
 from .._utils import (
     required_args,
@@ -22,6 +22,8 @@ from .._streaming import Stream, AsyncStream
 from .._base_client import (
     make_request_options,
 )
+from ..types.completion import Completion
+from ..types.chat.chat_completion_stream_options_param import ChatCompletionStreamOptionsParam
 
 __all__ = ["Completions", "AsyncCompletions"]
 
@@ -52,6 +54,7 @@ class Completions(SyncAPIResource):
         seed: Optional[int] | NotGiven = NOT_GIVEN,
         stop: Union[Optional[str], List[str], None] | NotGiven = NOT_GIVEN,
         stream: Optional[Literal[False]] | NotGiven = NOT_GIVEN,
+        stream_options: Optional[ChatCompletionStreamOptionsParam] | NotGiven = NOT_GIVEN,
         suffix: Optional[str] | NotGiven = NOT_GIVEN,
         temperature: Optional[float] | NotGiven = NOT_GIVEN,
         top_p: Optional[float] | NotGiven = NOT_GIVEN,
@@ -155,7 +158,11 @@ class Completions(SyncAPIResource):
               message.
               [Example Python code](https://cookbook.openai.com/examples/how_to_stream_completions).
 
+          stream_options: Options for streaming response. Only set this when you set `stream: true`.
+
           suffix: The suffix that comes after a completion of inserted text.
+
+              This parameter is only supported for `gpt-3.5-turbo-instruct`.
 
           temperature: What sampling temperature to use, between 0 and 2. Higher values like 0.8 will
               make the output more random, while lower values like 0.2 will make it more
@@ -200,6 +207,7 @@ class Completions(SyncAPIResource):
         presence_penalty: Optional[float] | NotGiven = NOT_GIVEN,
         seed: Optional[int] | NotGiven = NOT_GIVEN,
         stop: Union[Optional[str], List[str], None] | NotGiven = NOT_GIVEN,
+        stream_options: Optional[ChatCompletionStreamOptionsParam] | NotGiven = NOT_GIVEN,
         suffix: Optional[str] | NotGiven = NOT_GIVEN,
         temperature: Optional[float] | NotGiven = NOT_GIVEN,
         top_p: Optional[float] | NotGiven = NOT_GIVEN,
@@ -303,7 +311,11 @@ class Completions(SyncAPIResource):
           stop: Up to 4 sequences where the API will stop generating further tokens. The
               returned text will not contain the stop sequence.
 
+          stream_options: Options for streaming response. Only set this when you set `stream: true`.
+
           suffix: The suffix that comes after a completion of inserted text.
+
+              This parameter is only supported for `gpt-3.5-turbo-instruct`.
 
           temperature: What sampling temperature to use, between 0 and 2. Higher values like 0.8 will
               make the output more random, while lower values like 0.2 will make it more
@@ -348,6 +360,7 @@ class Completions(SyncAPIResource):
         presence_penalty: Optional[float] | NotGiven = NOT_GIVEN,
         seed: Optional[int] | NotGiven = NOT_GIVEN,
         stop: Union[Optional[str], List[str], None] | NotGiven = NOT_GIVEN,
+        stream_options: Optional[ChatCompletionStreamOptionsParam] | NotGiven = NOT_GIVEN,
         suffix: Optional[str] | NotGiven = NOT_GIVEN,
         temperature: Optional[float] | NotGiven = NOT_GIVEN,
         top_p: Optional[float] | NotGiven = NOT_GIVEN,
@@ -451,7 +464,11 @@ class Completions(SyncAPIResource):
           stop: Up to 4 sequences where the API will stop generating further tokens. The
               returned text will not contain the stop sequence.
 
+          stream_options: Options for streaming response. Only set this when you set `stream: true`.
+
           suffix: The suffix that comes after a completion of inserted text.
+
+              This parameter is only supported for `gpt-3.5-turbo-instruct`.
 
           temperature: What sampling temperature to use, between 0 and 2. Higher values like 0.8 will
               make the output more random, while lower values like 0.2 will make it more
@@ -496,6 +513,7 @@ class Completions(SyncAPIResource):
         seed: Optional[int] | NotGiven = NOT_GIVEN,
         stop: Union[Optional[str], List[str], None] | NotGiven = NOT_GIVEN,
         stream: Optional[Literal[False]] | Literal[True] | NotGiven = NOT_GIVEN,
+        stream_options: Optional[ChatCompletionStreamOptionsParam] | NotGiven = NOT_GIVEN,
         suffix: Optional[str] | NotGiven = NOT_GIVEN,
         temperature: Optional[float] | NotGiven = NOT_GIVEN,
         top_p: Optional[float] | NotGiven = NOT_GIVEN,
@@ -524,6 +542,7 @@ class Completions(SyncAPIResource):
                     "seed": seed,
                     "stop": stop,
                     "stream": stream,
+                    "stream_options": stream_options,
                     "suffix": suffix,
                     "temperature": temperature,
                     "top_p": top_p,
@@ -566,6 +585,7 @@ class AsyncCompletions(AsyncAPIResource):
         seed: Optional[int] | NotGiven = NOT_GIVEN,
         stop: Union[Optional[str], List[str], None] | NotGiven = NOT_GIVEN,
         stream: Optional[Literal[False]] | NotGiven = NOT_GIVEN,
+        stream_options: Optional[ChatCompletionStreamOptionsParam] | NotGiven = NOT_GIVEN,
         suffix: Optional[str] | NotGiven = NOT_GIVEN,
         temperature: Optional[float] | NotGiven = NOT_GIVEN,
         top_p: Optional[float] | NotGiven = NOT_GIVEN,
@@ -669,7 +689,11 @@ class AsyncCompletions(AsyncAPIResource):
               message.
               [Example Python code](https://cookbook.openai.com/examples/how_to_stream_completions).
 
+          stream_options: Options for streaming response. Only set this when you set `stream: true`.
+
           suffix: The suffix that comes after a completion of inserted text.
+
+              This parameter is only supported for `gpt-3.5-turbo-instruct`.
 
           temperature: What sampling temperature to use, between 0 and 2. Higher values like 0.8 will
               make the output more random, while lower values like 0.2 will make it more
@@ -714,6 +738,7 @@ class AsyncCompletions(AsyncAPIResource):
         presence_penalty: Optional[float] | NotGiven = NOT_GIVEN,
         seed: Optional[int] | NotGiven = NOT_GIVEN,
         stop: Union[Optional[str], List[str], None] | NotGiven = NOT_GIVEN,
+        stream_options: Optional[ChatCompletionStreamOptionsParam] | NotGiven = NOT_GIVEN,
         suffix: Optional[str] | NotGiven = NOT_GIVEN,
         temperature: Optional[float] | NotGiven = NOT_GIVEN,
         top_p: Optional[float] | NotGiven = NOT_GIVEN,
@@ -817,7 +842,11 @@ class AsyncCompletions(AsyncAPIResource):
           stop: Up to 4 sequences where the API will stop generating further tokens. The
               returned text will not contain the stop sequence.
 
+          stream_options: Options for streaming response. Only set this when you set `stream: true`.
+
           suffix: The suffix that comes after a completion of inserted text.
+
+              This parameter is only supported for `gpt-3.5-turbo-instruct`.
 
           temperature: What sampling temperature to use, between 0 and 2. Higher values like 0.8 will
               make the output more random, while lower values like 0.2 will make it more
@@ -862,6 +891,7 @@ class AsyncCompletions(AsyncAPIResource):
         presence_penalty: Optional[float] | NotGiven = NOT_GIVEN,
         seed: Optional[int] | NotGiven = NOT_GIVEN,
         stop: Union[Optional[str], List[str], None] | NotGiven = NOT_GIVEN,
+        stream_options: Optional[ChatCompletionStreamOptionsParam] | NotGiven = NOT_GIVEN,
         suffix: Optional[str] | NotGiven = NOT_GIVEN,
         temperature: Optional[float] | NotGiven = NOT_GIVEN,
         top_p: Optional[float] | NotGiven = NOT_GIVEN,
@@ -965,7 +995,11 @@ class AsyncCompletions(AsyncAPIResource):
           stop: Up to 4 sequences where the API will stop generating further tokens. The
               returned text will not contain the stop sequence.
 
+          stream_options: Options for streaming response. Only set this when you set `stream: true`.
+
           suffix: The suffix that comes after a completion of inserted text.
+
+              This parameter is only supported for `gpt-3.5-turbo-instruct`.
 
           temperature: What sampling temperature to use, between 0 and 2. Higher values like 0.8 will
               make the output more random, while lower values like 0.2 will make it more
@@ -1010,6 +1044,7 @@ class AsyncCompletions(AsyncAPIResource):
         seed: Optional[int] | NotGiven = NOT_GIVEN,
         stop: Union[Optional[str], List[str], None] | NotGiven = NOT_GIVEN,
         stream: Optional[Literal[False]] | Literal[True] | NotGiven = NOT_GIVEN,
+        stream_options: Optional[ChatCompletionStreamOptionsParam] | NotGiven = NOT_GIVEN,
         suffix: Optional[str] | NotGiven = NOT_GIVEN,
         temperature: Optional[float] | NotGiven = NOT_GIVEN,
         top_p: Optional[float] | NotGiven = NOT_GIVEN,
@@ -1038,6 +1073,7 @@ class AsyncCompletions(AsyncAPIResource):
                     "seed": seed,
                     "stop": stop,
                     "stream": stream,
+                    "stream_options": stream_options,
                     "suffix": suffix,
                     "temperature": temperature,
                     "top_p": top_p,

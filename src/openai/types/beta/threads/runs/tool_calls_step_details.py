@@ -1,20 +1,12 @@
-# File generated from our OpenAPI spec by Stainless.
+# File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-from typing import List, Union
-from typing_extensions import Literal, Annotated
+from typing import List
+from typing_extensions import Literal
 
-from ....._utils import PropertyInfo
+from .tool_call import ToolCall
 from ....._models import BaseModel
-from .code_tool_call import CodeToolCall
-from .function_tool_call import FunctionToolCall
-from .retrieval_tool_call import RetrievalToolCall
-from .web_retrieval_tool_call import WebRetrievalToolCall
 
-__all__ = ["ToolCallsStepDetails", "ToolCall"]
-
-ToolCall = Annotated[
-    Union[CodeToolCall, RetrievalToolCall, WebRetrievalToolCall, FunctionToolCall], PropertyInfo(discriminator="type")
-]
+__all__ = ["ToolCallsStepDetails"]
 
 
 class ToolCallsStepDetails(BaseModel):
@@ -22,7 +14,7 @@ class ToolCallsStepDetails(BaseModel):
     """An array of tool calls the run step was involved in.
 
     These can be associated with one of three types of tools: `code_interpreter`,
-    `web_retrieval`, `retrieval`, or `function`.
+    `file_search`, `function`, or `web_retrieval`.
     """
 
     type: Literal["tool_calls"]

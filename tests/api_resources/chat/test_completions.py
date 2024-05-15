@@ -1,4 +1,4 @@
-# File generated from our OpenAPI spec by Stainless.
+# File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 from __future__ import annotations
 
@@ -9,7 +9,9 @@ import pytest
 
 from openai import OpenAI, AsyncOpenAI
 from tests.utils import assert_matches_type
-from openai.types.chat import ChatCompletion
+from openai.types.chat import (
+    ChatCompletion,
+)
 
 base_url = os.environ.get("TEST_API_BASE_URL", "http://127.0.0.1:4010")
 
@@ -26,7 +28,7 @@ class TestCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo",
         )
         assert_matches_type(ChatCompletion, completion, path=["response"])
 
@@ -40,7 +42,7 @@ class TestCompletions:
                     "name": "string",
                 }
             ],
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo",
             frequency_penalty=-2,
             function_call="none",
             functions=[
@@ -59,6 +61,7 @@ class TestCompletions:
             seed=-9223372036854776000,
             stop="string",
             stream=False,
+            stream_options={"include_usage": True},
             temperature=1,
             tool_choice="none",
             tools=[
@@ -102,7 +105,7 @@ class TestCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo",
         )
 
         assert response.is_closed is True
@@ -119,7 +122,7 @@ class TestCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo",
         ) as response:
             assert not response.is_closed
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
@@ -138,7 +141,7 @@ class TestCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo",
             stream=True,
         )
         completion_stream.response.close()
@@ -153,7 +156,7 @@ class TestCompletions:
                     "name": "string",
                 }
             ],
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo",
             stream=True,
             frequency_penalty=-2,
             function_call="none",
@@ -172,6 +175,7 @@ class TestCompletions:
             response_format={"type": "json_object"},
             seed=-9223372036854776000,
             stop="string",
+            stream_options={"include_usage": True},
             temperature=1,
             tool_choice="none",
             tools=[
@@ -215,7 +219,7 @@ class TestCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo",
             stream=True,
         )
 
@@ -232,7 +236,7 @@ class TestCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo",
             stream=True,
         ) as response:
             assert not response.is_closed
@@ -256,7 +260,7 @@ class TestAsyncCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo",
         )
         assert_matches_type(ChatCompletion, completion, path=["response"])
 
@@ -270,7 +274,7 @@ class TestAsyncCompletions:
                     "name": "string",
                 }
             ],
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo",
             frequency_penalty=-2,
             function_call="none",
             functions=[
@@ -289,6 +293,7 @@ class TestAsyncCompletions:
             seed=-9223372036854776000,
             stop="string",
             stream=False,
+            stream_options={"include_usage": True},
             temperature=1,
             tool_choice="none",
             tools=[
@@ -332,7 +337,7 @@ class TestAsyncCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo",
         )
 
         assert response.is_closed is True
@@ -349,7 +354,7 @@ class TestAsyncCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo",
         ) as response:
             assert not response.is_closed
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
@@ -368,7 +373,7 @@ class TestAsyncCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo",
             stream=True,
         )
         await completion_stream.response.aclose()
@@ -383,7 +388,7 @@ class TestAsyncCompletions:
                     "name": "string",
                 }
             ],
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo",
             stream=True,
             frequency_penalty=-2,
             function_call="none",
@@ -402,6 +407,7 @@ class TestAsyncCompletions:
             response_format={"type": "json_object"},
             seed=-9223372036854776000,
             stop="string",
+            stream_options={"include_usage": True},
             temperature=1,
             tool_choice="none",
             tools=[
@@ -445,7 +451,7 @@ class TestAsyncCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo",
             stream=True,
         )
 
@@ -462,7 +468,7 @@ class TestAsyncCompletions:
                     "role": "system",
                 }
             ],
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo",
             stream=True,
         ) as response:
             assert not response.is_closed

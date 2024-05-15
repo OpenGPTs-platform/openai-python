@@ -1,4 +1,4 @@
-# File generated from our OpenAPI spec by Stainless.
+# File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 from __future__ import annotations
 
@@ -24,27 +24,41 @@ class TestAssistants:
     @parametrize
     def test_method_create(self, client: OpenAI) -> None:
         assistant = client.beta.assistants.create(
-            model="string",
+            model="gpt-4-turbo",
         )
         assert_matches_type(Assistant, assistant, path=["response"])
 
     @parametrize
     def test_method_create_with_all_params(self, client: OpenAI) -> None:
         assistant = client.beta.assistants.create(
-            model="string",
+            model="gpt-4-turbo",
             description="string",
-            file_ids=["string", "string", "string"],
             instructions="string",
             metadata={},
             name="string",
+            response_format="none",
+            temperature=1,
+            tool_resources={
+                "code_interpreter": {"file_ids": ["string", "string", "string"]},
+                "file_search": {
+                    "vector_store_ids": ["string"],
+                    "vector_stores": [
+                        {
+                            "file_ids": ["string", "string", "string"],
+                            "metadata": {},
+                        }
+                    ],
+                },
+            },
             tools=[{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
+            top_p=1,
         )
         assert_matches_type(Assistant, assistant, path=["response"])
 
     @parametrize
     def test_raw_response_create(self, client: OpenAI) -> None:
         response = client.beta.assistants.with_raw_response.create(
-            model="string",
+            model="gpt-4-turbo",
         )
 
         assert response.is_closed is True
@@ -55,7 +69,7 @@ class TestAssistants:
     @parametrize
     def test_streaming_response_create(self, client: OpenAI) -> None:
         with client.beta.assistants.with_streaming_response.create(
-            model="string",
+            model="gpt-4-turbo",
         ) as response:
             assert not response.is_closed
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
@@ -115,12 +129,18 @@ class TestAssistants:
         assistant = client.beta.assistants.update(
             "string",
             description="string",
-            file_ids=["string", "string", "string"],
             instructions="string",
             metadata={},
             model="string",
             name="string",
+            response_format="none",
+            temperature=1,
+            tool_resources={
+                "code_interpreter": {"file_ids": ["string", "string", "string"]},
+                "file_search": {"vector_store_ids": ["string"]},
+            },
             tools=[{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
+            top_p=1,
         )
         assert_matches_type(Assistant, assistant, path=["response"])
 
@@ -235,27 +255,41 @@ class TestAsyncAssistants:
     @parametrize
     async def test_method_create(self, async_client: AsyncOpenAI) -> None:
         assistant = await async_client.beta.assistants.create(
-            model="string",
+            model="gpt-4-turbo",
         )
         assert_matches_type(Assistant, assistant, path=["response"])
 
     @parametrize
     async def test_method_create_with_all_params(self, async_client: AsyncOpenAI) -> None:
         assistant = await async_client.beta.assistants.create(
-            model="string",
+            model="gpt-4-turbo",
             description="string",
-            file_ids=["string", "string", "string"],
             instructions="string",
             metadata={},
             name="string",
+            response_format="none",
+            temperature=1,
+            tool_resources={
+                "code_interpreter": {"file_ids": ["string", "string", "string"]},
+                "file_search": {
+                    "vector_store_ids": ["string"],
+                    "vector_stores": [
+                        {
+                            "file_ids": ["string", "string", "string"],
+                            "metadata": {},
+                        }
+                    ],
+                },
+            },
             tools=[{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
+            top_p=1,
         )
         assert_matches_type(Assistant, assistant, path=["response"])
 
     @parametrize
     async def test_raw_response_create(self, async_client: AsyncOpenAI) -> None:
         response = await async_client.beta.assistants.with_raw_response.create(
-            model="string",
+            model="gpt-4-turbo",
         )
 
         assert response.is_closed is True
@@ -266,7 +300,7 @@ class TestAsyncAssistants:
     @parametrize
     async def test_streaming_response_create(self, async_client: AsyncOpenAI) -> None:
         async with async_client.beta.assistants.with_streaming_response.create(
-            model="string",
+            model="gpt-4-turbo",
         ) as response:
             assert not response.is_closed
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
@@ -326,12 +360,18 @@ class TestAsyncAssistants:
         assistant = await async_client.beta.assistants.update(
             "string",
             description="string",
-            file_ids=["string", "string", "string"],
             instructions="string",
             metadata={},
             model="string",
             name="string",
+            response_format="none",
+            temperature=1,
+            tool_resources={
+                "code_interpreter": {"file_ids": ["string", "string", "string"]},
+                "file_search": {"vector_store_ids": ["string"]},
+            },
             tools=[{"type": "code_interpreter"}, {"type": "code_interpreter"}, {"type": "code_interpreter"}],
+            top_p=1,
         )
         assert_matches_type(Assistant, assistant, path=["response"])
 

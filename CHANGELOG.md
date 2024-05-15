@@ -1,5 +1,328 @@
 # Changelog
 
+## 1.26.0 (2024-05-06)
+
+Full Changelog: [v1.25.2...v1.26.0](https://github.com/openai/openai-python/compare/v1.25.2...v1.26.0)
+
+### Features
+
+* **api:** add usage metadata when streaming ([#1395](https://github.com/openai/openai-python/issues/1395)) ([3cb064b](https://github.com/openai/openai-python/commit/3cb064b10d661dbcc74b6bc1ed7d8e635ab2876a))
+
+## 1.25.2 (2024-05-05)
+
+Full Changelog: [v1.25.1...v1.25.2](https://github.com/openai/openai-python/compare/v1.25.1...v1.25.2)
+
+### Documentation
+
+* **readme:** fix misleading timeout example value ([#1393](https://github.com/openai/openai-python/issues/1393)) ([3eba8e7](https://github.com/openai/openai-python/commit/3eba8e7573ec1bf4231a304c8eabc8a8d077f46d))
+
+## 1.25.1 (2024-05-02)
+
+Full Changelog: [v1.25.0...v1.25.1](https://github.com/openai/openai-python/compare/v1.25.0...v1.25.1)
+
+### Chores
+
+* **internal:** bump prism version ([#1390](https://github.com/openai/openai-python/issues/1390)) ([a5830fc](https://github.com/openai/openai-python/commit/a5830fc1c5ffd21e2010490905084ad5614212a3))
+
+## 1.25.0 (2024-05-01)
+
+Full Changelog: [v1.24.1...v1.25.0](https://github.com/openai/openai-python/compare/v1.24.1...v1.25.0)
+
+### Features
+
+* **api:** delete messages ([#1388](https://github.com/openai/openai-python/issues/1388)) ([d0597cd](https://github.com/openai/openai-python/commit/d0597cdc1813cddffacbaa50565e86d2420d1873))
+
+## 1.24.1 (2024-04-30)
+
+Full Changelog: [v1.24.0...v1.24.1](https://github.com/openai/openai-python/compare/v1.24.0...v1.24.1)
+
+### Chores
+
+* **internal:** add link to openapi spec ([#1385](https://github.com/openai/openai-python/issues/1385)) ([b315d04](https://github.com/openai/openai-python/commit/b315d04e9624ec3a841d7c51813bb553640c23ce))
+
+## 1.24.0 (2024-04-29)
+
+Full Changelog: [v1.23.6...v1.24.0](https://github.com/openai/openai-python/compare/v1.23.6...v1.24.0)
+
+### Features
+
+* **api:** add required tool_choice ([#1382](https://github.com/openai/openai-python/issues/1382)) ([c558f65](https://github.com/openai/openai-python/commit/c558f651df39f61425cd4109318f78ed94cbf163))
+
+
+### Chores
+
+* **client:** log response headers in debug mode ([#1383](https://github.com/openai/openai-python/issues/1383)) ([f31a426](https://github.com/openai/openai-python/commit/f31a4261adc4ebd92582cee264e41eb6a6dafc57))
+* **internal:** minor reformatting ([#1377](https://github.com/openai/openai-python/issues/1377)) ([7003dbb](https://github.com/openai/openai-python/commit/7003dbb863b6e16381070b8b86ac24aa070a3799))
+* **internal:** reformat imports ([#1375](https://github.com/openai/openai-python/issues/1375)) ([2ad0c3b](https://github.com/openai/openai-python/commit/2ad0c3b8e0b746ed20db3c84a9c6a369aa10bf5d))
+
+## 1.23.6 (2024-04-25)
+
+Full Changelog: [v1.23.5...v1.23.6](https://github.com/openai/openai-python/compare/v1.23.5...v1.23.6)
+
+### Chores
+
+* **internal:** update test helper function ([#1371](https://github.com/openai/openai-python/issues/1371)) ([6607c4a](https://github.com/openai/openai-python/commit/6607c4a491fd1912f9222d6fe464ccef6e865eac))
+
+## 1.23.5 (2024-04-24)
+
+Full Changelog: [v1.23.4...v1.23.5](https://github.com/openai/openai-python/compare/v1.23.4...v1.23.5)
+
+### Chores
+
+* **internal:** use actions/checkout@v4 for codeflow ([#1368](https://github.com/openai/openai-python/issues/1368)) ([d1edf8b](https://github.com/openai/openai-python/commit/d1edf8beb806ebaefdcc2cb6e39f99e1811a2668))
+
+## 1.23.4 (2024-04-24)
+
+Full Changelog: [v1.23.3...v1.23.4](https://github.com/openai/openai-python/compare/v1.23.3...v1.23.4)
+
+### Bug Fixes
+
+* **api:** change timestamps to unix integers ([#1367](https://github.com/openai/openai-python/issues/1367)) ([fbc0e15](https://github.com/openai/openai-python/commit/fbc0e15f422971bd15499d4ea5f42a1c885c7004))
+* **docs:** doc improvements ([#1364](https://github.com/openai/openai-python/issues/1364)) ([8c3a005](https://github.com/openai/openai-python/commit/8c3a005247ea045b9a95e7459eba2a90067daf71))
+
+
+### Chores
+
+* **tests:** rename test file ([#1366](https://github.com/openai/openai-python/issues/1366)) ([4204e63](https://github.com/openai/openai-python/commit/4204e63e27584c68ad27825261225603d7a87008))
+
+## 1.23.3 (2024-04-23)
+
+Full Changelog: [v1.23.2...v1.23.3](https://github.com/openai/openai-python/compare/v1.23.2...v1.23.3)
+
+### Chores
+
+* **internal:** restructure imports ([#1359](https://github.com/openai/openai-python/issues/1359)) ([4e5eb37](https://github.com/openai/openai-python/commit/4e5eb374ea0545a6117db657bb05f6417bc62d18))
+
+## 1.23.2 (2024-04-19)
+
+Full Changelog: [v1.23.1...v1.23.2](https://github.com/openai/openai-python/compare/v1.23.1...v1.23.2)
+
+### Bug Fixes
+
+* **api:** correct types for message attachment tools ([#1348](https://github.com/openai/openai-python/issues/1348)) ([78a6261](https://github.com/openai/openai-python/commit/78a6261eaad7839284903287d4f647d9cb4ced0b))
+
+## 1.23.1 (2024-04-18)
+
+Full Changelog: [v1.23.0...v1.23.1](https://github.com/openai/openai-python/compare/v1.23.0...v1.23.1)
+
+### Bug Fixes
+
+* **api:** correct types for attachments ([#1342](https://github.com/openai/openai-python/issues/1342)) ([542d30c](https://github.com/openai/openai-python/commit/542d30c6dad4e139bf3eb443936d42b7b42dad54))
+
+## 1.23.0 (2024-04-18)
+
+Full Changelog: [v1.22.0...v1.23.0](https://github.com/openai/openai-python/compare/v1.22.0...v1.23.0)
+
+### Features
+
+* **api:** add request id property to response classes ([#1341](https://github.com/openai/openai-python/issues/1341)) ([444d680](https://github.com/openai/openai-python/commit/444d680cbb3745adbc27788213ae3312567136a8))
+
+
+### Documentation
+
+* **helpers:** fix example snippets ([#1339](https://github.com/openai/openai-python/issues/1339)) ([8929088](https://github.com/openai/openai-python/commit/8929088b206a04b4c5b85fb69b0b983fb56f9b03))
+
+## 1.22.0 (2024-04-18)
+
+Full Changelog: [v1.21.2...v1.22.0](https://github.com/openai/openai-python/compare/v1.21.2...v1.22.0)
+
+### Features
+
+* **api:** batch list endpoint ([#1338](https://github.com/openai/openai-python/issues/1338)) ([a776f38](https://github.com/openai/openai-python/commit/a776f387e3159f9a8f4dcaa7d0d3b78c2a884f91))
+
+
+### Chores
+
+* **internal:** ban usage of lru_cache ([#1331](https://github.com/openai/openai-python/issues/1331)) ([8f9223b](https://github.com/openai/openai-python/commit/8f9223bfe13200c685fc97c25ada3015a69c6df7))
+* **internal:** bump pyright to 1.1.359 ([#1337](https://github.com/openai/openai-python/issues/1337)) ([feec0dd](https://github.com/openai/openai-python/commit/feec0dd1dd243941a279c3224c5ca1d727d76676))
+
+## 1.21.2 (2024-04-17)
+
+Full Changelog: [v1.21.1...v1.21.2](https://github.com/openai/openai-python/compare/v1.21.1...v1.21.2)
+
+### Chores
+
+* **internal:** add lru_cache helper function ([#1329](https://github.com/openai/openai-python/issues/1329)) ([cbeebfc](https://github.com/openai/openai-python/commit/cbeebfcca8bf1a3feb4462a79e10099bda5bed84))
+
+## 1.21.1 (2024-04-17)
+
+Full Changelog: [v1.21.0...v1.21.1](https://github.com/openai/openai-python/compare/v1.21.0...v1.21.1)
+
+### Chores
+
+* **api:** docs and response_format response property ([#1327](https://github.com/openai/openai-python/issues/1327)) ([7a6d142](https://github.com/openai/openai-python/commit/7a6d142f013994c4eb9a4f55888464c885f8baf0))
+
+## 1.21.0 (2024-04-17)
+
+Full Changelog: [v1.20.0...v1.21.0](https://github.com/openai/openai-python/compare/v1.20.0...v1.21.0)
+
+### Features
+
+* **api:** add vector stores ([#1325](https://github.com/openai/openai-python/issues/1325)) ([038a3c5](https://github.com/openai/openai-python/commit/038a3c50db7b6a88f54ff1cd1ff6cbaef2caf87f))
+
+## 1.20.0 (2024-04-16)
+
+Full Changelog: [v1.19.0...v1.20.0](https://github.com/openai/openai-python/compare/v1.19.0...v1.20.0)
+
+### Features
+
+* **client:** add header OpenAI-Project ([#1320](https://github.com/openai/openai-python/issues/1320)) ([0c489f1](https://github.com/openai/openai-python/commit/0c489f16a7d9e5ac753da87273b223893edefa69))
+* extract chat models to a named enum ([#1322](https://github.com/openai/openai-python/issues/1322)) ([1ccd9b6](https://github.com/openai/openai-python/commit/1ccd9b67322736a4714e58c953d59585322c527d))
+
+## 1.19.0 (2024-04-15)
+
+Full Changelog: [v1.18.0...v1.19.0](https://github.com/openai/openai-python/compare/v1.18.0...v1.19.0)
+
+### Features
+
+* **errors:** add request_id property ([#1317](https://github.com/openai/openai-python/issues/1317)) ([f9eb77d](https://github.com/openai/openai-python/commit/f9eb77dca422b9456f4e3b31c7474046235eec1d))
+
+## 1.18.0 (2024-04-15)
+
+Full Changelog: [v1.17.1...v1.18.0](https://github.com/openai/openai-python/compare/v1.17.1...v1.18.0)
+
+### Features
+
+* **api:** add batch API ([#1316](https://github.com/openai/openai-python/issues/1316)) ([3e6f19e](https://github.com/openai/openai-python/commit/3e6f19e6e7489bf1c94944a5f8f9b1d4535cdc43))
+* **api:** updates ([#1314](https://github.com/openai/openai-python/issues/1314)) ([8281dc9](https://github.com/openai/openai-python/commit/8281dc956178f5de345645660081f7d0c15a57a6))
+
+## 1.17.1 (2024-04-12)
+
+Full Changelog: [v1.17.0...v1.17.1](https://github.com/openai/openai-python/compare/v1.17.0...v1.17.1)
+
+### Chores
+
+* fix typo ([#1304](https://github.com/openai/openai-python/issues/1304)) ([1129082](https://github.com/openai/openai-python/commit/1129082955f98d76c0927781ef9e7d0beeda2ec4))
+* **internal:** formatting ([#1311](https://github.com/openai/openai-python/issues/1311)) ([8fd411b](https://github.com/openai/openai-python/commit/8fd411b48b6b1eafaab2dac26201525c1ee0b942))
+
+## 1.17.0 (2024-04-10)
+
+Full Changelog: [v1.16.2...v1.17.0](https://github.com/openai/openai-python/compare/v1.16.2...v1.17.0)
+
+### Features
+
+* **api:** add additional messages when creating thread run ([#1298](https://github.com/openai/openai-python/issues/1298)) ([70eb081](https://github.com/openai/openai-python/commit/70eb081804b14cc8c151ebd85458545a50a074fd))
+* **client:** add DefaultHttpxClient and DefaultAsyncHttpxClient ([#1302](https://github.com/openai/openai-python/issues/1302)) ([69cdfc3](https://github.com/openai/openai-python/commit/69cdfc319fff7ebf28cdd13cc6c1761b7d97811d))
+* **models:** add to_dict & to_json helper methods ([#1305](https://github.com/openai/openai-python/issues/1305)) ([40a881d](https://github.com/openai/openai-python/commit/40a881d10442af8b445ce030f8ab338710e1c4c8))
+
+## 1.16.2 (2024-04-04)
+
+Full Changelog: [v1.16.1...v1.16.2](https://github.com/openai/openai-python/compare/v1.16.1...v1.16.2)
+
+### Bug Fixes
+
+* **client:** correct logic for line decoding in streaming ([#1293](https://github.com/openai/openai-python/issues/1293)) ([687caef](https://github.com/openai/openai-python/commit/687caefa4acf615bf404f16817bfd9a6f285ee5c))
+
+## 1.16.1 (2024-04-02)
+
+Full Changelog: [v1.16.0...v1.16.1](https://github.com/openai/openai-python/compare/v1.16.0...v1.16.1)
+
+### Chores
+
+* **internal:** defer model build for import latency ([#1291](https://github.com/openai/openai-python/issues/1291)) ([bc6866e](https://github.com/openai/openai-python/commit/bc6866eb2335d01532190d0906cad7bf9af28621))
+
+## 1.16.0 (2024-04-01)
+
+Full Changelog: [v1.15.0...v1.16.0](https://github.com/openai/openai-python/compare/v1.15.0...v1.16.0)
+
+### Features
+
+* **api:** add support for filtering messages by run_id ([#1288](https://github.com/openai/openai-python/issues/1288)) ([58d6b77](https://github.com/openai/openai-python/commit/58d6b773218ef1dd8dc6208124a16078e4ac11c1))
+* **api:** run polling helpers ([#1289](https://github.com/openai/openai-python/issues/1289)) ([6b427f3](https://github.com/openai/openai-python/commit/6b427f38610847bce3ce5334177f07917bd7c187))
+
+
+### Chores
+
+* **client:** validate that max_retries is not None ([#1286](https://github.com/openai/openai-python/issues/1286)) ([aa5920a](https://github.com/openai/openai-python/commit/aa5920af6131c49a44352524154ee4a1684e76b2))
+
+
+### Refactors
+
+* rename createAndStream to stream ([6b427f3](https://github.com/openai/openai-python/commit/6b427f38610847bce3ce5334177f07917bd7c187))
+
+## 1.15.0 (2024-03-31)
+
+Full Changelog: [v1.14.3...v1.15.0](https://github.com/openai/openai-python/compare/v1.14.3...v1.15.0)
+
+### Features
+
+* **api:** adding temperature parameter ([#1282](https://github.com/openai/openai-python/issues/1282)) ([0e68fd3](https://github.com/openai/openai-python/commit/0e68fd3690155785d1fb0ee9a8604f51e6701b1d))
+* **client:** increase default HTTP max_connections to 1000 and max_keepalive_connections to 100 ([#1281](https://github.com/openai/openai-python/issues/1281)) ([340d139](https://github.com/openai/openai-python/commit/340d1391e3071a265ed12c0a8d70d4d73a860bd8))
+* **package:** export default constants ([#1275](https://github.com/openai/openai-python/issues/1275)) ([fdc126e](https://github.com/openai/openai-python/commit/fdc126e428320f1bed5eabd3eed229f08ab9effa))
+
+
+### Bug Fixes
+
+* **project:** use absolute github links on PyPi ([#1280](https://github.com/openai/openai-python/issues/1280)) ([94cd528](https://github.com/openai/openai-python/commit/94cd52837650e5b7e115119d69e6b1c7ba1f6bf1))
+
+
+### Chores
+
+* **internal:** bump dependencies ([#1273](https://github.com/openai/openai-python/issues/1273)) ([18dcd65](https://github.com/openai/openai-python/commit/18dcd654d9f54628b5fe21a499d1fef500e15f7f))
+
+
+### Documentation
+
+* **readme:** change undocumented params wording ([#1284](https://github.com/openai/openai-python/issues/1284)) ([7498ef1](https://github.com/openai/openai-python/commit/7498ef1e9568200086ba3efb99ea100feb05e3f0))
+
+## 1.14.3 (2024-03-25)
+
+Full Changelog: [v1.14.2...v1.14.3](https://github.com/openai/openai-python/compare/v1.14.2...v1.14.3)
+
+### Bug Fixes
+
+* revert regression with 3.7 support ([#1269](https://github.com/openai/openai-python/issues/1269)) ([37aed56](https://github.com/openai/openai-python/commit/37aed564143dc7281f1eaa6ab64ec5ca334cf25e))
+
+
+### Chores
+
+* **internal:** construct error properties instead of using the raw response ([#1257](https://github.com/openai/openai-python/issues/1257)) ([11dce5c](https://github.com/openai/openai-python/commit/11dce5c66395722b245f5d5461ce379ca7b939e4))
+* **internal:** formatting change ([#1258](https://github.com/openai/openai-python/issues/1258)) ([b907dd7](https://github.com/openai/openai-python/commit/b907dd7dcae895e4209559da061d0991a8d640a6))
+* **internal:** loosen input type for util function ([#1250](https://github.com/openai/openai-python/issues/1250)) ([fc8b4c3](https://github.com/openai/openai-python/commit/fc8b4c37dc91dfcc0535c19236092992171784a0))
+
+
+### Documentation
+
+* **contributing:** fix typo ([#1264](https://github.com/openai/openai-python/issues/1264)) ([835cb9b](https://github.com/openai/openai-python/commit/835cb9b2f92e2aa3329545b4677865dcd4fd00f0))
+* **readme:** consistent use of sentence case in headings ([#1255](https://github.com/openai/openai-python/issues/1255)) ([519f371](https://github.com/openai/openai-python/commit/519f371af779b5fa353292ff5a2d3332afe0987e))
+* **readme:** document how to make undocumented requests ([#1256](https://github.com/openai/openai-python/issues/1256)) ([5887858](https://github.com/openai/openai-python/commit/5887858a7b649dfde5b733ef01e5cffcf953b2a7))
+
+## 1.14.2 (2024-03-19)
+
+Full Changelog: [v1.14.1...v1.14.2](https://github.com/openai/openai-python/compare/v1.14.1...v1.14.2)
+
+### Performance Improvements
+
+* cache TypeAdapters ([#1114](https://github.com/openai/openai-python/issues/1114)) ([41b6fee](https://github.com/openai/openai-python/commit/41b6feec70d3f203e36ba9a92205389bafce930c))
+* cache TypeAdapters ([#1243](https://github.com/openai/openai-python/issues/1243)) ([2005076](https://github.com/openai/openai-python/commit/2005076f500bef6e0a6cc8f935b9cc9fef65ab5b))
+
+
+### Chores
+
+* **internal:** update generated pragma comment ([#1247](https://github.com/openai/openai-python/issues/1247)) ([3eeb9b3](https://github.com/openai/openai-python/commit/3eeb9b3a71e01c2593be443a97a353371466d01a))
+
+
+### Documentation
+
+* assistant improvements ([#1249](https://github.com/openai/openai-python/issues/1249)) ([e7a3176](https://github.com/openai/openai-python/commit/e7a3176b7606822bd5ad8f7fece87de6aad1e5b6))
+* fix typo in CONTRIBUTING.md ([#1245](https://github.com/openai/openai-python/issues/1245)) ([adef57a](https://github.com/openai/openai-python/commit/adef57ae5c71734873ba49bccd92fa7f28068d28))
+
+## 1.14.1 (2024-03-15)
+
+Full Changelog: [v1.14.0...v1.14.1](https://github.com/openai/openai-python/compare/v1.14.0...v1.14.1)
+
+### Documentation
+
+* **readme:** assistant streaming ([#1238](https://github.com/openai/openai-python/issues/1238)) ([0fc30a2](https://github.com/openai/openai-python/commit/0fc30a23030b4ff60f27cd2f472517926ed0f300))
+
+## 1.14.0 (2024-03-13)
+
+Full Changelog: [v1.13.4...v1.14.0](https://github.com/openai/openai-python/compare/v1.13.4...v1.14.0)
+
+### Features
+
+* **assistants:** add support for streaming ([#1233](https://github.com/openai/openai-python/issues/1233)) ([17635dc](https://github.com/openai/openai-python/commit/17635dccbeddf153f8201dbca18b44e16a1799b2))
+
 ## 1.13.4 (2024-03-13)
 
 Full Changelog: [v1.13.3...v1.13.4](https://github.com/openai/openai-python/compare/v1.13.3...v1.13.4)

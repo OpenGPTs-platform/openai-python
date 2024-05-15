@@ -1,4 +1,4 @@
-# File generated from our OpenAPI spec by Stainless.
+# File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 from __future__ import annotations
 
@@ -41,6 +41,7 @@ class TestCompletions:
             seed=-9223372036854776000,
             stop="\n",
             stream=False,
+            stream_options={"include_usage": True},
             suffix="test.",
             temperature=1,
             top_p=1,
@@ -99,6 +100,7 @@ class TestCompletions:
             presence_penalty=-2,
             seed=-9223372036854776000,
             stop="\n",
+            stream_options={"include_usage": True},
             suffix="test.",
             temperature=1,
             top_p=1,
@@ -161,6 +163,7 @@ class TestAsyncCompletions:
             seed=-9223372036854776000,
             stop="\n",
             stream=False,
+            stream_options={"include_usage": True},
             suffix="test.",
             temperature=1,
             top_p=1,
@@ -219,6 +222,7 @@ class TestAsyncCompletions:
             presence_penalty=-2,
             seed=-9223372036854776000,
             stop="\n",
+            stream_options={"include_usage": True},
             suffix="test.",
             temperature=1,
             top_p=1,
