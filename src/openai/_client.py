@@ -57,6 +57,7 @@ class OpenAI(SyncAPIClient):
     models: resources.Models
     fine_tuning: resources.FineTuning
     beta: resources.Beta
+    ops: resources.Ops
     batches: resources.Batches
     with_raw_response: OpenAIWithRawResponse
     with_streaming_response: OpenAIWithStreamedResponse
@@ -142,6 +143,7 @@ class OpenAI(SyncAPIClient):
         self.models = resources.Models(self)
         self.fine_tuning = resources.FineTuning(self)
         self.beta = resources.Beta(self)
+        self.ops = resources.Ops(self)
         self.batches = resources.Batches(self)
         self.with_raw_response = OpenAIWithRawResponse(self)
         self.with_streaming_response = OpenAIWithStreamedResponse(self)

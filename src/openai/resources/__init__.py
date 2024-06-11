@@ -1,5 +1,6 @@
 # File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
+from .ops import Ops, WebRetrieval
 from .beta import (
     Beta,
     AsyncBeta,
@@ -150,6 +151,8 @@ __all__ = [
     "AsyncBetaWithRawResponse",
     "BetaWithStreamingResponse",
     "AsyncBetaWithStreamingResponse",
+    "Ops",
+    "WebRetrieval",
     "Batches",
     "AsyncBatches",
     "BatchesWithRawResponse",
