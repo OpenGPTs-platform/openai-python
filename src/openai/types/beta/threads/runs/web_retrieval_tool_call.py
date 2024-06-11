@@ -11,8 +11,8 @@ class WebRetrievalToolCall(BaseModel):
     id: str
     """The ID of the tool call object."""
 
-    site: str
-    """The site that the tool call is being made to."""
+    query: str
+    """The query that the tool call is being made with."""
 
     retrieval: object
     """For now, this is always going to be an empty object."""
